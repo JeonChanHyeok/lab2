@@ -1,8 +1,8 @@
 # Makefile
 
 CC = gcc
-CFLAGS = -rdynamic
-OBJS = dltest.c
+CFLAGS = -g -rdynamic
+OBJS = my_assert.c
 LIBS = -ldl
 TARGET = run
 $(TARGET):$(OBJS)
