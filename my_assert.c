@@ -1,24 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <dlfcn.h>
+
+void my_assert(int expression){
+    if(expression){
+    }else{
+        printf("assert_error\n");
+        abort();
+    }
+}
 
 void foo(int num){
-     void *handle;
-    int (*my_assert)(int expression);
-    char *error;
-
-    handle = dlopen("./lib/libtest.so",RTLD_LAZY);
-    if(!handle){
-        fputs(dlerror(),stderr);
-        exit(1);
-    }
-    my_assert = dlsym(handle,"my_assert");
-    if((error = dlerror()) != NULL){
-        fprintf(stderr,"%s",error);
-        exit(1);
-    }
-
-    (*my_assert)(((num>=0) && (num<=100)));
+    my_assert(((num>=0) && (num<=100)));
     printf("foo : num = %d\n",num);
 }
 

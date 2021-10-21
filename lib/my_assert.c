@@ -4,7 +4,7 @@
 void my_assert(int expression){
     if(expression){
     }else{
-        printf("assert error!");
+        perror("assert error");
         abort();
     }
 }

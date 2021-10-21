@@ -1,10 +1,10 @@
 # Makefile
 
 CC = gcc
-CFLAGS = -g -rdynamic
+CFLAGS = -g
 OBJS = my_assert.c
-LIBS = -ldl
-TARGET = run
+LIBS = 
+TARGET = my_assert
 $(TARGET):$(OBJS)
 	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LIBS)
 clean:
