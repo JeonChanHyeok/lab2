@@ -17,7 +17,7 @@ void foo(int num){
 int main(int argc, char *argv[]){
    int num;
    if(argc < 2){
-       fprintf(stderr, "asd");
+       fprintf(stderr, "a");
        exit(1);
    }
    num = atoi(argv[1]);

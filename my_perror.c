@@ -15,7 +15,7 @@ int main(int argc, char *argv[]){
     FILE *f;
 
     if(argc <2){
-        printf ("으아아");
+        fprintf(stderr, "Usage : assert_test aNumber\n(0 <= aNumber <= 100)\n");
         exit(1);
     }
     if((f = fopen(argv[1],"r")) == NULL){ 

@@ -2,9 +2,9 @@
 
 CC = gcc
 CFLAGS = -g
-OBJS = my_assert.c
+OBJS = hang.c
 LIBS = 
-TARGET = my_assert
+TARGET = hang
 $(TARGET):$(OBJS)
 	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LIBS)
 clean:
